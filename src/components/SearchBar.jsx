@@ -14,10 +14,11 @@ const SearchBar = (props) => {
       <form>
         <label>Search</label>
         <input type="text" name="searchValue" value={props.searchValue} onChange={handleSearch}/>
-        <input type="checkbox" checked={props.checkStock} onChange={props.boxFilter} />
-      
       </form>
-      
+      <form>
+      <label>Only show available products</label>
+        <input type="checkbox" name="inStock" checked={props.checkStock} onChange={props.boxFilter} />
+      </form>
     </div>
   )
 }
